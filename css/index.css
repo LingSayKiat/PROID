@@ -275,6 +275,7 @@ header nav ul li a.active {
   background-color: #f9f9f9;
   padding: 4rem 2rem;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 #carousel h2 {
@@ -343,6 +344,10 @@ header nav ul li a.active {
 }
 
 /* Testimonials Styles */
+#testimonials {
+  margin-bottom: 150px;
+}
+
 #testimonials h2 {
   font-size: 2.1rem;
 }
@@ -370,7 +375,7 @@ header nav ul li a.active {
   border-radius: 2rem;
   margin: 0 10px;
   display: flex;
-  align-items: center; /* Center align the text */
+  align-items: center;
   justify-content: center;
   transition: width 0.5s ease, transform 0.5s ease;
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
