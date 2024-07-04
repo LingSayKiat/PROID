@@ -193,7 +193,7 @@ header nav ul li a.active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 18x`00px;
+  max-width: 1800px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -568,17 +568,17 @@ input:checked + label .description {
 }
 
 .testimonial-card[for="c1"] {
-  background-image: url("/images/testimonials/female.jpg");
+  background-image: url("images/testimonials/female.jpg");
 }
 
 .testimonial-card[for="c2"] {
-  background-image: url("/images/testimonials/female.jpg");
+  background-image: url("images/testimonials/female.jpg");
 }
 .testimonial-card[for="c3"] {
-  background-image: url("/images/testimonials/female.jpg");
+  background-image: url("images/testimonials/female.jpg");
 }
 .testimonial-card[for="c4"] {
-  background-image: url("/images/testimonials/female.jpg");
+  background-image: url("images/testimonials/female.jpg");
 }
 
 @media (max-width: 1024px) {
