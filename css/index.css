@@ -23,10 +23,10 @@ header {
   top: 0;
   z-index: 1000;
   height: 80px;
+  padding: 0 20px;
 }
 
 header .logo {
-  flex: 1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,18 +34,14 @@ header .logo {
 
 header .logo img {
   height: 50px;
-  margin-left: 300px;
 }
 
 header h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   margin: 0;
+  font-size: 1.5rem;
 }
 
 header nav {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -55,7 +51,8 @@ header nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li {
@@ -93,6 +90,61 @@ header nav ul li a.active::after {
 header nav ul li a:hover,
 header nav ul li a.active {
   color: #f85253;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #feb95f;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    position: static;
+    transform: none;
+    font-size: 1.2rem;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #92c3a4;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 0;
+    z-index: 999;
+  }
+
+  header nav ul.active {
+    display: flex;
+  }
+
+  header nav ul li {
+    margin: 0;
+  }
+
+  header nav ul li a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
 /* Floating Banner Styles */
@@ -141,18 +193,21 @@ header nav ul li a.active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 1500px;
+  max-width: 18x`00px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .about-image {
+  flex: 1;
   margin: 4rem;
-  align-items: left;
+  align-items: center;
 }
 
 .about-image img {
-  max-width: 100rem;
-  height: 23rem;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -176,7 +231,7 @@ header nav ul li a.active {
 
 .app-links {
   margin-top: 2rem;
-  gap: 100px;
+  gap: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,6 +248,68 @@ header nav ul li a.active {
 
 .fa-app-store-ios {
   font-size: 130px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    margin: 2rem 0;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .fa-google-play {
+    font-size: 80px;
+  }
+
+  .fa-app-store-ios {
+    font-size: 90px;
+  }
+
+  .qr-code {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .fa-google-play {
+    font-size: 70px;
+  }
+
+  .fa-app-store-ios {
+    font-size: 75px;
+  }
+
+  .qr-code {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* Features Styles */
@@ -464,6 +581,66 @@ input:checked + label .description {
   background-image: url("/images/testimonials/female.jpg");
 }
 
+@media (max-width: 1024px) {
+  .testimonial-card {
+    width: 235px;
+    height: 400px;
+  }
+
+  input:checked + label {
+    width: 250%;
+    transform: scale(1.02);
+  }
+
+  .description h4 {
+    font-size: 1.5rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 175px;
+    height: 400px;
+  }
+
+  input:checked + label {
+    width: 250%;
+    transform: scale(1.02);
+  }
+
+  .description h4 {
+    font-size: 1.2rem;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 115px;
+    height: 400px;
+  }
+
+  input:checked + label {
+    width: 250%;
+    transform: scale(1.02);
+  }
+
+  .description h4 {
+    font-size: 1.2rem;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+  }
+}
+
 /* Partners Section Styles */
 #partners {
   text-align: center;
@@ -484,7 +661,7 @@ input:checked + label .description {
 }
 
 .partner {
-  flex: 1;
+  flex: 1 1 200px; /* Allows each partner to take up at least 200px and grow */
   margin: 1rem;
   max-width: 200px;
   text-align: center;
@@ -499,6 +676,52 @@ input:checked + label .description {
 .partner p {
   font-size: 1rem;
   color: #333;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .partner {
+    flex: 1 1 150px; /* Adjusts the width of each partner on smaller screens */
+    max-width: 150px;
+  }
+
+  #partners h2 {
+    font-size: 1.8rem;
+  }
+
+  .partner p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner {
+    flex: 1 1 120px; /* Adjusts the width of each partner on smaller screens */
+    max-width: 120px;
+  }
+
+  #partners h2 {
+    font-size: 1.6rem;
+  }
+
+  .partner p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner {
+    flex: 1 1 230px;
+    max-width: 230px;
+  }
+
+  #partners h2 {
+    font-size: 2.1rem;
+  }
+
+  .partner p {
+    font-size: 0.8dem;
+  }
 }
 
 /* FAQ Section Styles */
@@ -543,6 +766,7 @@ input:checked + label .description {
 .faq-question:after {
   content: "\002B";
   font-size: 1.5rem;
+
   float: right;
 }
 

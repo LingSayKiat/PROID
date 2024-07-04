@@ -34,6 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Navbar Burger
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+});
+
 //FAQ
 document.addEventListener("DOMContentLoaded", function () {
   const faqQuestions = document.querySelectorAll(".faq-question");
@@ -74,14 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
     ],
