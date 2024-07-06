@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -33,11 +33,11 @@ header .logo {
 }
 
 header .logo img {
-  height: 50px;
+  height: 4.5rem;
 }
 
 header h1 {
-  margin: 0;
+  margin: 0 0 0 1.75rem;
   font-size: 1.5rem;
 }
 
@@ -78,7 +78,7 @@ header nav ul li a::after {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #f85253;
+  background-color: #fb6e52;
   transition: width 0.3s ease;
 }
 
@@ -89,7 +89,7 @@ header nav ul li a.active::after {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-  color: #f85253;
+  color: #fb6e52;
 }
 
 /* Hamburger Menu Styles */
@@ -111,6 +111,7 @@ header nav ul li a.active {
 /* Media Queries */
 @media (max-width: 768px) {
   header h1 {
+    margin: 0 0 0 1rem;
     position: static;
     transform: none;
     font-size: 1.2rem;
@@ -201,7 +202,7 @@ header nav ul li a.active {
 .about-image {
   flex: 1;
   margin: 4rem;
-  align-items: center;
+  align-items: left;
 }
 
 .about-image img {
@@ -213,7 +214,7 @@ header nav ul li a.active {
 
 .about-text {
   flex: 1;
-  padding: 1rem;
+  padding: 1rem 0rem 3.5rem;
   text-align: left;
 }
 
@@ -231,23 +232,21 @@ header nav ul li a.active {
 
 .app-links {
   margin-top: 2rem;
-  gap: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 
 .qr-code {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
 }
 
 .fa-google-play {
-  font-size: 125px;
+  font-size: 135px;
 }
 
 .fa-app-store-ios {
-  font-size: 130px;
+  font-size: 140px;
 }
 
 /* Media Queries */
@@ -331,7 +330,7 @@ header nav ul li a.active {
 }
 
 .card-feature {
-  width: 350px;
+  width: 450px;
   background-color: #e2e2e2;
   border-radius: 10px;
   overflow: hidden;
@@ -339,6 +338,11 @@ header nav ul li a.active {
   margin: 30px;
   transition: transform 0.3s ease, background-color 0.3s ease,
     box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card-feature:hover {
@@ -349,7 +353,7 @@ header nav ul li a.active {
 }
 
 .card-content {
-  padding: 30px 50px 30px 50px;
+  padding: 30px 40px 30px 40px;
 }
 
 .card-content h3 {
@@ -371,13 +375,17 @@ header nav ul li a.active {
 }
 
 .fa-clock,
-.fa-calendar-check,
 .fa-medapps,
+.fa-calendar-check,
 .fa-award {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 50px;
   color: #568265;
   transition: color 0.3s ease;
+}
+
+.fa-medapps {
+  -webkit-text-stroke: 1.5px;
 }
 
 .card-feature:hover .fa-clock,
@@ -422,7 +430,7 @@ header nav ul li a.active {
 .carousel-item img {
   max-width: 100%;
   height: auto;
-  max-height: 500px; /* Set a max height for images */
+  max-height: 500px;
   width: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -443,21 +451,8 @@ header nav ul li a.active {
 .slick-prev,
 .slick-next {
   background-color: #568265 !important;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
+  border-radius: 100%;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  content: "";
 }
 
 /* Testimonials Styles */
@@ -568,17 +563,17 @@ input:checked + label .description {
 }
 
 .testimonial-card[for="c1"] {
-  background-image: url("images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/female.jpg");
 }
 
 .testimonial-card[for="c2"] {
-  background-image: url("images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/female.jpg");
 }
 .testimonial-card[for="c3"] {
-  background-image: url("images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/female.jpg");
 }
 .testimonial-card[for="c4"] {
-  background-image: url("images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/female.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -661,7 +656,7 @@ input:checked + label .description {
 }
 
 .partner {
-  flex: 1 1 200px; /* Allows each partner to take up at least 200px and grow */
+  flex: 1 1 200px;
   margin: 1rem;
   max-width: 200px;
   text-align: center;
@@ -678,10 +673,9 @@ input:checked + label .description {
   color: #333;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
   .partner {
-    flex: 1 1 150px; /* Adjusts the width of each partner on smaller screens */
+    flex: 1 1 150px;
     max-width: 150px;
   }
 
@@ -696,7 +690,7 @@ input:checked + label .description {
 
 @media (max-width: 768px) {
   .partner {
-    flex: 1 1 120px; /* Adjusts the width of each partner on smaller screens */
+    flex: 1 1 120px;
     max-width: 120px;
   }
 
@@ -760,7 +754,7 @@ input:checked + label .description {
 }
 
 .faq-question:hover {
-  background-color: #f85253;
+  background-color: #fb6e52;
 }
 
 .faq-question:after {
@@ -816,7 +810,7 @@ footer p {
 }
 
 .social-media a:hover {
-  color: #f85253;
+  color: #fb6e52;
 }
 
 .footer-links {
@@ -830,7 +824,7 @@ footer p {
 }
 
 .footer-links a:hover {
-  color: #f85253;
+  color: #fb6e52;
 }
 
 .footer-copyright {
