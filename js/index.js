@@ -44,6 +44,70 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Loading Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const elementsLeft = document.querySelectorAll(".slide-in-left");
+  const elementsRight = document.querySelectorAll(".slide-in-right");
+  const elementsUp = document.querySelectorAll(".slide-in-up");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains("slide-in-left")) {
+            entry.target.classList.add("animate-left");
+          } else if (entry.target.classList.contains("slide-in-right")) {
+            entry.target.classList.add("animate-right");
+          } else if (entry.target.classList.contains("slide-in-up")) {
+            entry.target.classList.add("animate-up");
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  elementsLeft.forEach((element) => {
+    observer.observe(element);
+  });
+  elementsRight.forEach((element) => {
+    observer.observe(element);
+  });
+  elementsUp.forEach((element) => {
+    observer.observe(element);
+  });
+});
+
+//Scroll to top button
+document.addEventListener("DOMContentLoaded", function () {
+  let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 100) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+// Features drop down
+function toggleDropdown(id) {
+  var element = document.getElementById(id);
+  if (element.style.display === "block") {
+    element.style.display = "none";
+  } else {
+    element.style.display = "block";
+  }
+}
+
 //FAQ
 document.addEventListener("DOMContentLoaded", function () {
   const faqQuestions = document.querySelectorAll(".faq-question");

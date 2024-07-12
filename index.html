@@ -34,9 +34,12 @@
   </head>
 
   <body>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+
     <header class="header">
       <div class="logo">
-        <h1>iVolunteer</h1>
+        <a href="index.html" class="logo-link"><h1>iVolunteer</h1></a>
       </div>
       <nav class="nav">
         <div class="hamburger" id="hamburger">
@@ -47,6 +50,7 @@
         <ul id="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
+          <li><a href="#carousel">Events</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#footer">Contact</a></li>
@@ -64,7 +68,7 @@
       </div>
     </div>
 
-    <section id="about">
+    <section id="about" class="slide-in-left">
       <div class="about-content">
         <div class="about-image">
           <img src="images/aboutus/family.avif" alt="About iVolunteer" />
@@ -100,10 +104,13 @@
       </div>
     </section>
 
-    <section id="features">
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">
+      &#8679;
+    </button>
+    <section id="features" class="slide-in-right">
       <h2>Features</h2>
       <div class="card-container">
-        <div class="card-feature">
+        <div class="card-feature" onclick="toggleDropdown('dropdown1')">
           <i class="fa-regular fa-clock"></i>
           <div class="card-content">
             <h3>Flexible Scheduling</h3>
@@ -112,8 +119,12 @@
               schedules with our user-friendly app.
             </p>
           </div>
+          <div class="dropdown-content" id="dropdown1">
+            <img src="images/features/rewards.png" alt="Flexible Scheduling" />
+            <p>Additional details about Flexible Scheduling.</p>
+          </div>
         </div>
-        <div class="card-feature">
+        <div class="card-feature" onclick="toggleDropdown('dropdown2')">
           <i class="fa-brands fa-medapps"></i>
           <div class="card-content">
             <h3>Social Media Campaigns</h3>
@@ -122,8 +133,18 @@
               volunteering. Follow us on Facebook, Instagram, and Twitter.
             </p>
           </div>
+          <div class="dropdown-content" id="dropdown2">
+            <img
+              src="images/events/beach_clean_up.avif"
+              alt="Social Media Campaigns"
+            />
+            <p>Additional details about Social Media Campaigns.</p>
+          </div>
         </div>
-        <div class="card-feature">
+        <div
+          class="card-feature"
+          onclick="window.location.href='diy_volunteer_kits.html'"
+        >
           <i class="fa-regular fa-calendar-check"></i>
           <div class="card-content">
             <h3>DIY Volunteer Kits</h3>
@@ -134,7 +155,8 @@
             </p>
           </div>
         </div>
-        <div class="card-feature">
+
+        <div class="card-feature" onclick="toggleDropdown('dropdown4')">
           <i class="fa-solid fa-award"></i>
           <div class="card-content">
             <h3>Rewards</h3>
@@ -144,11 +166,15 @@
               with others.
             </p>
           </div>
+          <div class="dropdown-content" id="dropdown4">
+            <img src="images/features/rewards.png" alt="Rewards" />
+            <p>Additional details about Rewards.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="carousel">
+    <section id="carousel" class="slide-in-up">
       <h2>Current Events</h2>
       <div class="carousel-container">
         <div class="carousel-item">
@@ -223,7 +249,7 @@
       </div>
     </section>
 
-    <section id="testimonials">
+    <section id="testimonials" class="slide-in-left">
       <h2>Testimonials</h2>
       <div class="wrapper">
         <div class="testimonial-container">
@@ -232,7 +258,7 @@
             <div class="row">
               <div class="overlay"></div>
               <div class="description">
-                <h4>Jessica Lee</h4>
+                <h4>Aidan Chong</h4>
                 <p>
                   "Participating in the community garden project has been a
                   transformative experience for me and my family. We've not only
@@ -250,7 +276,7 @@
             <div class="row">
               <div class="overlay"></div>
               <div class="description">
-                <h4>Daniel Wong</h4>
+                <h4>Never Making POLITE</h4>
                 <p>
                   "Volunteering at the animal shelter every weekend has become a
                   cherished family tradition. It's heartwarming to see how our
@@ -303,28 +329,43 @@
       </div>
     </section>
 
-    <section id="partners">
+    <section id="partners" class="slide-in-right">
       <h2>Our Partners</h2>
       <div class="partners-container">
         <div class="partner">
-          <img src="images/partners/NYC_logo.jpg" alt="NYC Logo" />
+          <img src="images/partners/nyc.jpg" alt="NYC Logo" />
         </div>
         <div class="partner">
-          <img src="images/partners/PA_logo.jpeg" alt="PA Logo" />
+          <img src="images/partners/pa.jpeg" alt="PA Logo" />
         </div>
         <div class="partner">
-          <img src="images/partners/MOE_logo.png" alt="NYC Logo" />
+          <img src="images/partners/moe.png" alt="NYC Logo" />
         </div>
         <div class="partner">
-          <img src="images/partners/MSF_logo.png" alt="NYC Logo" />
+          <img src="images/partners/msf.png" alt="NYC Logo" />
         </div>
         <div class="partner">
-          <img src="images/partners/YMCA_logo.png" alt="YMCA Logo" />
+          <img src="images/partners/ymca.png" alt="YMCA Logo" />
+        </div>
+        <div class="partner">
+          <img src="images/partners/grab.webp" alt="YMCA Logo" />
+        </div>
+        <div class="partner">
+          <img src="images/partners/ock.png" alt="YMCA Logo" />
+        </div>
+        <div class="partner">
+          <img src="images/partners/ntuc.jpg" alt="YMCA Logo" />
+        </div>
+        <div class="partner">
+          <img src="images/partners/macs.png" alt="YMCA Logo" />
+        </div>
+        <div class="partner">
+          <img src="images/partners/subway.png" alt="YMCA Logo" />
         </div>
       </div>
     </section>
 
-    <section id="faq">
+    <section id="faq" class="slide-in-up">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-container">
         <div class="faq-item">

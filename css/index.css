@@ -11,6 +11,93 @@ section {
   text-align: center;
 }
 
+/* Slide-in animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left,
+.slide-in-right,
+.slide-in-up {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-left {
+  animation: slideInLeft 1s forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s forwards;
+}
+
+.animate-up {
+  animation: slideInUp 1s forwards;
+}
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #568265;
+  color: #feb95f;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #f85253;
+}
+
+/* Header */
+.logo-link {
+  text-decoration: none;
+  color: inherit; /* Matches the parent color */
+}
+
+.logo-link:hover,
+.logo-link:focus,
+.logo-link:active {
+  text-decoration: none;
+  color: inherit; /* Ensure it doesn't change color on interaction */
+}
+
 /* Navbar */
 header {
   background: #568265;
@@ -290,24 +377,24 @@ header nav ul li a.active {
 
 @media (max-width: 480px) {
   .about-text h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .about-text p {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
 
   .fa-google-play {
-    font-size: 70px;
+    font-size: 100px;
   }
 
   .fa-app-store-ios {
-    font-size: 75px;
+    font-size: 100px;
   }
 
   .qr-code {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
   }
 }
 
@@ -330,7 +417,7 @@ header nav ul li a.active {
 }
 
 .card-feature {
-  width: 450px;
+  width: 500px;
   background-color: #e2e2e2;
   border-radius: 10px;
   overflow: hidden;
@@ -393,6 +480,124 @@ header nav ul li a.active {
 .card-feature:hover .fa-medapps,
 .card-feature:hover .fa-award {
   color: #feb95f;
+}
+
+/* DIY Kits Section Styles */
+#diy-kits {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+#diy-kits h2 {
+  font-size: 2.1rem;
+}
+
+.kits-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 100px 0px 200px 0px;
+}
+
+.kit-feature {
+  width: 500px;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.kit-feature:hover {
+  background-color: #568265;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.kit-content {
+  padding: 30px 40px 30px 40px;
+}
+
+.kit-content h3 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #568265;
+  transition: color 0.3s ease;
+}
+
+.kit-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.kit-feature:hover .kit-content h3,
+.kit-feature:hover .kit-content p {
+  color: #feb95f;
+}
+
+.kit-image {
+  margin-top: 25px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kit-feature:hover .kit-image {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #feb95f;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+
+.download-btn:hover {
+  background-color: #f85253;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.dropdown-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card-feature.active .dropdown-content {
+  display: block;
 }
 
 /* Events Section Styles */
@@ -563,11 +768,11 @@ input:checked + label .description {
 }
 
 .testimonial-card[for="c1"] {
-  background-image: url("/iVolunteer/images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/aidan.jpg");
 }
 
 .testimonial-card[for="c2"] {
-  background-image: url("/iVolunteer/images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/aidan2.jpg");
 }
 .testimonial-card[for="c3"] {
   background-image: url("/iVolunteer/images/testimonials/female.jpg");
@@ -721,7 +926,7 @@ input:checked + label .description {
 /* FAQ Section Styles */
 #faq {
   background: #f9f9f9;
-  padding-bottom: 150px;
+  padding: 150px 0 150px 0;
   text-align: left;
 }
 
@@ -751,6 +956,7 @@ input:checked + label .description {
   outline: none;
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif; /* Ensuring FAQ section uses Poppins font */
 }
 
 .faq-question:hover {
@@ -778,6 +984,44 @@ input:checked + label .description {
 
 .faq-answer p {
   padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  #faq {
+    padding: 100px 20px;
+  }
+
+  #faq h2 {
+    font-size: 1.8rem;
+  }
+
+  .faq-question {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .faq-answer p {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #faq {
+    padding: 80px 10px;
+  }
+
+  #faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-question {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .faq-answer p {
+    padding: 0.5rem 0;
+  }
 }
 
 /* Footer Styles */
