@@ -482,9 +482,34 @@ header nav ul li a.active {
   color: #feb95f;
 }
 
+/* DIY Kits Filter */
+.filter-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-container label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #568265;
+}
+
+.filter-container select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #568265;
+  font-size: 1rem;
+  color: #568265;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-container select:focus {
+  box-shadow: 0 0 5px rgba(254, 185, 95, 0.5);
+}
+
 /* DIY Kits Section Styles */
 #diy-kits {
-  padding: 50px 20px;
   background-color: #f4f4f4;
   text-align: center;
 }
@@ -772,13 +797,13 @@ input:checked + label .description {
 }
 
 .testimonial-card[for="c2"] {
-  background-image: url("/iVolunteer/images/testimonials/aidan2.jpg");
+  background-image: url("/iVolunteer/images/testimonials/caris_tay.avif");
 }
 .testimonial-card[for="c3"] {
-  background-image: url("/iVolunteer/images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/kelvin_lim");
 }
 .testimonial-card[for="c4"] {
-  background-image: url("/iVolunteer/images/testimonials/female.jpg");
+  background-image: url("/iVolunteer/images/testimonials/rao_liyan.jpeg");
 }
 
 @media (max-width: 1024px) {

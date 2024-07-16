@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIY Volunteer Kits - iVolunteer</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f410eb8ee6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" class="logo-link"><h1>iVolunteer</h1></a>
+      </div>
+      <nav class="nav">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#carousel">Events</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="diy-kits">
+      <!-- Scroll to Top Button -->
+      <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+      <h2>DIY Volunteer Kits</h2>
+      <div class="filter-container">
+        <label for="kit-filter">Filter Kits: </label>
+        <select id="kit-filter" onchange="filterKits()">
+          <option value="all">All</option>
+          <option value="community">Community</option>
+          <option value="environment">Environment</option>
+          <option value="health">Health</option>
+        </select>
+      </div>
+      <div class="kits-container">
+        <div class="kit-feature" data-category="environment">
+          <img
+            src="images/features/diy_kits/harvest_hope.jpg"
+            alt="Urban gardening"
+            class="kit-image"
+          />
+          <div class="kit-content">
+            <h3>Harvest Hope</h3>
+            <p>
+              Urban gardening is a great way to contribute to a greener city and
+              support your community. This kit will guide you through setting up
+              a small, manageable garden and donating your harvest to those in
+              need.
+            </p>
+            <a href="diy_kits/harvest_hope.pdf" download class="download-btn"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+        <div class="kit-feature" data-category="health">
+          <img
+            src="images/features/diy_kits/gratitude_in-a_bag.avif"
+            alt="Gratitude in a Bag"
+            class="kit-image"
+          />
+          <div class="kit-content">
+            <h3>Gratitude in a Bag</h3>
+            <p>
+              Show appreciation to healthcare workers by creating care packages
+              with small toiletries, healthy snacks, and heartfelt thank you
+              notes. This kit provides all the steps needed to assemble and
+              deliver these thoughtful gifts.
+            </p>
+            <a
+              href="diy_kits/gratitude_in_a_bag.pdf"
+              download
+              class="download-btn"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+        <div class="kit-feature" data-category="community">
+          <img
+            src="images/features/diy_kits/bookmarks_for_the_soul.webp"
+            alt="Bookmarks for the Soul"
+            class="kit-image"
+          />
+          <div class="kit-content">
+            <h3>Bookmarks for the Soul</h3>
+            <p>
+              Create beautiful bookmarks to uplift and inspire others. This kit
+              includes designs and instructions for making bookmarks that can be
+              donated to schools, libraries, or community centers.
+            </p>
+            <a
+              href="diy_kits/bookmarks_for_the_soul.pdf"
+              download
+              class="download-btn"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+        <div class="kit-feature" data-category="community">
+          <img
+            src="images/features/diy_kits/clothing_drive.jpg"
+            alt="Clothing Drive"
+            class="kit-image"
+          />
+          <div class="kit-content">
+            <h3>Clothing Drive</h3>
+            <p>
+              Organize a clothing drive to collect and distribute clothes to
+              those in need. This kit provides guidelines for promoting the
+              drive, collecting donations, and delivering them to local shelters
+              or charities.This kit provides all the tools and guidelines you
+              need for a successful community cleanup event.
+            </p>
+            <a href="diy_kits/clothing_drive.pdf" download class="download-btn"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+        <div class="kit-feature" data-category="community">
+          <img
+            src="images/features/diy_kits/charity_tote_creations.webp"
+            alt="Charity Tote Creations"
+            class="kit-image"
+          />
+          <div class="kit-content">
+            <h3>Charity Tote Creations</h3>
+            <p>
+              Use your creativity to make personalized canvas tote bags for
+              donation with the Charity Tote Creations Kit. This kit includes
+              plain tote bags, fabric paint, stencils, and brushes. Design
+              unique tote bags to donate to local charities, spreading
+              positivity and support through artistic expression.
+            </p>
+            <a
+              href="diy_kits/charity_tote_creations.pdf"
+              download
+              class="download-btn"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+        <div class="kit-feature" data-category="environment">
+          <img
+            src="images/features/diy_kits/eco_warriors.jpeg"
+            alt="Eco Warriors"
+            class="kit-image"
+          />
+          <div class="kit-content">
+            <h3>Eco Warriors</h3>
+            <p>
+              Organise community clean-up events with the Eco Warriors Kit. This
+              kit includes reusable bags, gloves, tongs, and safety gear,
+              ensuring volunteers are well-equipped for litter collection. The
+              kit promotes environmental awareness and a cleaner, healthier
+              community.
+            </p>
+            <a href="diy_kits/eco_warriors.pdf" download class="download-btn"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <h2>Contact Us</h2>
+      <p>Email: contact@ivolunteer.sg</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.telegram.org" target="_blank">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a> |
+        <a href="#terms">Terms of Service</a> |
+        <a href="#support">Support</a>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 iVolunteer. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

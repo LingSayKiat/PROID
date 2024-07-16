@@ -108,6 +108,22 @@ function toggleDropdown(id) {
   }
 }
 
+//DIY Kits Filter
+function filterKits() {
+  const filterValue = document.getElementById("kit-filter").value;
+  const kits = document.getElementsByClassName("kit-feature");
+
+  for (let i = 0; i < kits.length; i++) {
+    if (filterValue === "all") {
+      kits[i].style.display = "block";
+    } else if (kits[i].getAttribute("data-category") === filterValue) {
+      kits[i].style.display = "block";
+    } else {
+      kits[i].style.display = "none";
+    }
+  }
+}
+
 //FAQ
 document.addEventListener("DOMContentLoaded", function () {
   const faqQuestions = document.querySelectorAll(".faq-question");
