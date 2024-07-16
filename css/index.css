@@ -848,7 +848,7 @@ input:checked + label .description {
 
 @media (max-width: 480px) {
   .testimonial-card {
-    width: 115px;
+    width: 100px;
     height: 400px;
   }
 
