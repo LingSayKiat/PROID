@@ -800,7 +800,7 @@ input:checked + label .description {
   background-image: url("/iVolunteer/images/testimonials/caris_tay.avif");
 }
 .testimonial-card[for="c3"] {
-  background-image: url("/iVolunteer/images/testimonials/kelvin_lim");
+  background-image: url("/iVolunteer/images/testimonials/kelvin_lim.jpg");
 }
 .testimonial-card[for="c4"] {
   background-image: url("/iVolunteer/images/testimonials/rao_liyan.jpeg");
