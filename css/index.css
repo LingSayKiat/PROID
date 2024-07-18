@@ -398,6 +398,65 @@ header nav ul li a.active {
   }
 }
 
+/* Benefits Section Styles */
+
+#benefits {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#benefits h2 {
+  font-size: 2.1rem;
+  margin: 0;
+}
+
+.card-benefit {
+  width: 475px;
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-benefit:hover {
+  background-color: #568265;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card-benefit:hover .card-content h3,
+.card-benefit:hover .card-content p {
+  color: #e8f5e9;
+}
+
+.fa-hand-holding-heart,
+.fa-smile,
+.fa-globe {
+  margin-top: 25px;
+  font-size: 60px;
+  color: #568265;
+  transition: color 0.3s ease;
+}
+
+.fa-medapps {
+  -webkit-text-stroke: 1.5px;
+}
+
+.card-benefit:hover .fa-hand-holding-heart,
+.card-benefit:hover .fa-smile,
+.card-benefit:hover .fa-globe {
+  color: #e8f5e9;
+}
+
 /* Features Styles */
 
 #features h2 {
@@ -418,7 +477,7 @@ header nav ul li a.active {
 
 .card-feature {
   width: 350px;
-  background-color: #e2e2e2;
+  background-color: #e8f5e9;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -458,15 +517,14 @@ header nav ul li a.active {
 
 .card-feature:hover .card-content h3,
 .card-feature:hover .card-content p {
-  color: #feb95f;
+  color: #e8f5e9;
 }
 
-.fa-clock,
-.fa-medapps,
-.fa-calendar-check,
-.fa-award {
+.fa-hand-holding-heart,
+.fa-smile,
+.fa-globe {
   margin-top: 25px;
-  font-size: 50px;
+  font-size: 60px;
   color: #568265;
   transition: color 0.3s ease;
 }
@@ -475,11 +533,24 @@ header nav ul li a.active {
   -webkit-text-stroke: 1.5px;
 }
 
+.fa-clock,
+.fa-calendar-check,
+.fa-medapps,
+.fa-award {
+  margin-top: 25px;
+  font-size: 60px;
+  color: #568265;
+  transition: color 0.3s ease;
+}
+
+.card-feature:hover .fa-hand-holding-heart,
+.card-feature:hover .fa-smile,
+.card-feature:hover .fa-globe,
 .card-feature:hover .fa-clock,
 .card-feature:hover .fa-calendar-check,
 .card-feature:hover .fa-medapps,
 .card-feature:hover .fa-award {
-  color: #feb95f;
+  color: #e8f5e9;
 }
 
 /* DIY Kits Filter */
@@ -491,15 +562,12 @@ header nav ul li a.active {
 .filter-container label {
   font-size: 1.2rem;
   margin-right: 10px;
-  color: #568265;
 }
 
 .filter-container select {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #568265;
   font-size: 1rem;
-  color: #568265;
   background-color: #fff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -510,7 +578,7 @@ header nav ul li a.active {
 
 /* DIY Kits Section Styles */
 #diy-kits {
-  background-color: #f4f4f4;
+  background-color: #fff;
   text-align: center;
 }
 
@@ -527,7 +595,7 @@ header nav ul li a.active {
 
 .kit-feature {
   width: 500px;
-  background-color: #e2e2e2;
+  background-color: #e8f5e9;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -567,7 +635,7 @@ header nav ul li a.active {
 
 .kit-feature:hover .kit-content h3,
 .kit-feature:hover .kit-content p {
-  color: #feb95f;
+  color: #e8f5e9;
 }
 
 .kit-image {
@@ -613,6 +681,7 @@ header nav ul li a.active {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+  color: #000;
 }
 
 .dropdown-content img {
